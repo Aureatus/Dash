@@ -7,7 +7,7 @@ function App() {
   const [theme, setTheme] = useState({});
 
   useEffect(() => {
-    setTheme(darkTheme);
+    setTheme(lightTheme);
   }, []);
   return (
     <ThemeProvider theme={theme}>
