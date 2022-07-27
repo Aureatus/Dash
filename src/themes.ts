@@ -1,4 +1,21 @@
-export const lightTheme = {
+import { DefaultTheme } from 'styled-components';
+
+declare module 'styled-components' {
+  export interface DefaultTheme {
+    background: {
+      primary: string;
+    };
+    text: {
+      primary: string;
+    };
+    accent: {
+      primary: string;
+      secondary: string;
+    };
+  }
+}
+
+export const lightTheme: DefaultTheme = {
   background: {
     primary: '#ffffff',
   },
@@ -12,7 +29,7 @@ export const lightTheme = {
   },
 };
 
-export const darkTheme = {
+export const darkTheme: DefaultTheme = {
   background: {
     primary: '#000000',
   },
