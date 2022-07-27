@@ -1,14 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import { darkTheme, lightTheme } from './themes';
 
 function App() {
-  const [theme, setTheme] = useState({});
+  const [theme, setTheme] = useState(lightTheme);
 
-  useEffect(() => {
-    setTheme(lightTheme);
-  }, []);
   return (
     <ThemeProvider theme={theme}>
       <div></div>
