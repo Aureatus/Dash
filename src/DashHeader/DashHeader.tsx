@@ -5,17 +5,27 @@ import {
   Header,
   HeadingSection,
   LogOutSection,
+  StyledNav,
   Title,
 } from './StyledComponents';
+import ThemeToggleButton from './ThemeToggleButton';
 
-const DashHeader = ({ currentUser }: { currentUser: string | null }) => {
+const DashHeader = ({
+  currentUser,
+  setTheme,
+}: {
+  currentUser: string | null;
+  setTheme: Function;
+}) => {
   return (
     <Header>
       <HeadingSection>
         <DashLogo src={Logo} />
         <Title>Dash</Title>
       </HeadingSection>
-      <nav>abc</nav>
+      <StyledNav>
+        <ThemeToggleButton setTheme={setTheme}></ThemeToggleButton>
+      </StyledNav>
       {currentUser && (
         <LogOutSection>
           <LogOutButton />
