@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 
+import GlobalStyle from './GlobalStyle';
 import { darkTheme, lightTheme } from './themes';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <div></div>
     </ThemeProvider>
   );
