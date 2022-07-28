@@ -73,12 +73,31 @@ const LogoutImg = styled.img`
   height: calc(50% + 4vw);
 `;
 
+const StyledNav = styled.nav`
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const LightModeImg = styled.img`
+  display: block;
+`;
+
+const DarkModeImg = styled.img`
+  display: block;
+`;
+
 export {
+  DarkModeImg,
   DashLogo,
   Header,
   HeadingSection,
+  LightModeImg,
   LogoutImg,
   LogOutSection,
   StyledButton,
+  StyledNav,
   Title,
 };
