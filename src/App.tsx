@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 
+import DashHeader from './DashHeader/DashHeader';
 import GlobalStyle from './GlobalStyle';
+import { Container } from './StyledComponents';
 import { darkTheme, lightTheme } from './themes';
 
 function App() {
@@ -10,7 +12,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <div></div>
+      <Container>
+        <DashHeader currentUser={null}></DashHeader>
+      </Container>
     </ThemeProvider>
   );
 }
