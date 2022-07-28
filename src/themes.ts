@@ -25,7 +25,7 @@ export const lightTheme: DefaultTheme = {
 
   accent: {
     primary: '#FFDA44',
-    secondary: '#d63131',
+    secondary: '#ff4e50',
   },
 };
 
@@ -38,6 +38,6 @@ export const darkTheme: DefaultTheme = {
   },
   accent: {
     primary: '#FFDA44',
-    secondary: '#d63131',
+    secondary: '#ff4e50',
   },
 };
