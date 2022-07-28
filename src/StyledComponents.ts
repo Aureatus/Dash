@@ -6,7 +6,7 @@ const Container = styled.div`
 
   display: grid;
 
-  grid-template: 1fr 10fr / 1fr;
+  grid-template: 10% 90% / 1fr;
 `;
 
 export { Container };
