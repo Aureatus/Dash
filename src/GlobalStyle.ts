@@ -5,6 +5,10 @@ const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.text.primary};
     background-color: ${({ theme }) => theme.background.primary};
     font-family: 'Lato', sans-serif;
+
+    transition: background-color 0.8s ease,
+    color 0.8s ease;
+
   }
 `;
 
