@@ -13,7 +13,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Container>
-        <DashHeader currentUser={null}></DashHeader>
+        <DashHeader currentUser={null} setTheme={setTheme}></DashHeader>
       </Container>
     </ThemeProvider>
   );
