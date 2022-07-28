@@ -34,7 +34,7 @@ export const darkTheme: DefaultTheme = {
     primary: '#000000',
   },
   text: {
-    primary: 'ffffff',
+    primary: '#ffffff',
   },
   accent: {
     primary: '#FFDA44',
