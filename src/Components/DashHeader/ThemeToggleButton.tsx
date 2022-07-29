@@ -1,9 +1,9 @@
 import { useTheme } from 'styled-components';
 import styled from 'styled-components';
 
-import darkModeSVG from '../../public/dark_mode_FILL1_wght400_GRAD0_opsz48.svg';
-import lightModeSVG from '../../public/light_mode_FILL1_wght400_GRAD0_opsz48.svg';
-import { darkTheme, lightTheme } from '../themes';
+import darkModeSVG from '../../../public/dark_mode_FILL1_wght400_GRAD0_opsz48.svg';
+import lightModeSVG from '../../../public/light_mode_FILL1_wght400_GRAD0_opsz48.svg';
+import { darkTheme, lightTheme } from '../../themes';
 import { DarkModeImg, LightModeImg, StyledButton } from './StyledComponents';
 
 const ToggleButton = styled(StyledButton)`
