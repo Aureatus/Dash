@@ -1,4 +1,5 @@
-import Logo from '../../../public/bolt-svgrepo-com.svg';
+import Logo from '/bolt-svgrepo-com.svg';
+
 import LogOutButton from './LogOutButton';
 import {
   DashLogo,
