@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
-import DashHeader from './DashHeader/DashHeader';
+import DashHeader from './Components/DashHeader/DashHeader';
 import GlobalStyle from './GlobalStyle';
 import { Container } from './StyledComponents';
 import { darkTheme, lightTheme } from './themes';
