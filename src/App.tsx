@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
 import DashHeader from './DashHeader/DashHeader';
@@ -14,6 +15,7 @@ function App() {
       <GlobalStyle />
       <Container>
         <DashHeader currentUser={null} setTheme={setTheme}></DashHeader>
+        <Routes></Routes>
       </Container>
     </ThemeProvider>
   );
