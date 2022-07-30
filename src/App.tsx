@@ -1,15 +1,19 @@
 import { useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
 import DashHeader from './Components/DashHeader/DashHeader';
 import ProtectedRoute from './Components/ProtectedRoute';
+import auth from './firebase/auth/auth';
 import GlobalStyle from './GlobalStyle';
 import { Container } from './StyledComponents';
 import { darkTheme, lightTheme } from './themes';
 
 function App() {
   const [theme, setTheme] = useState(lightTheme);
+
+  const [user, loading, error] = useAuthState(auth);
 
   return (
     <ThemeProvider theme={theme}>
