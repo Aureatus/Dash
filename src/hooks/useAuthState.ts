@@ -30,7 +30,7 @@ const useAuthState = () => {
 
     return listener(); // unsubscribes from firebase auth
   }, []);
-  return [user, loading, error];
+  return [user, loading, error] as const;
 };
 
 export default useAuthState;
