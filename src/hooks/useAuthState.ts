@@ -10,7 +10,8 @@ const useAuthState = () => {
   const [error, setError] = useState<string>('');
 
   useEffect(() => {
-    const listener = onAuthStateChanged(auth, (user) => {
+    onAuthStateChanged(auth, (user) => {
+      console.log(user);
       try {
         if (user) {
           setUser(user);
@@ -27,8 +28,6 @@ const useAuthState = () => {
         setError(message);
       }
     });
-
-    return listener(); // unsubscribes from firebase auth
   }, []);
   return [user, loading, error] as const;
 };
