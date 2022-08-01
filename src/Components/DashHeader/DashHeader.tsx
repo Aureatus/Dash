@@ -1,5 +1,8 @@
+import { useContext } from 'react';
+
 import Logo from '/bolt-svgrepo-com.svg';
 
+import UserContext from '../../context/UserContext';
 import LogOutButton from './LogOutButton';
 import {
   DashLogo,
@@ -11,13 +14,9 @@ import {
 } from './StyledComponents';
 import ThemeToggleButton from './ThemeToggleButton';
 
-const DashHeader = ({
-  currentUser,
-  setTheme,
-}: {
-  currentUser: string | null;
-  setTheme: Function;
-}) => {
+const DashHeader = ({ setTheme }: { setTheme: Function }) => {
+  const user = useContext(UserContext);
+
   return (
     <Header>
       <HeadingSection>
@@ -27,7 +26,7 @@ const DashHeader = ({
       <StyledNav>
         <ThemeToggleButton setTheme={setTheme}></ThemeToggleButton>
       </StyledNav>
-      {currentUser && (
+      {user && (
         <LogOutSection>
           <LogOutButton />
         </LogOutSection>
