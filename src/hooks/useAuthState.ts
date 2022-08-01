@@ -11,7 +11,6 @@ const useAuthState = () => {
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
-      console.log(user);
       try {
         if (user) {
           setUser(user);
