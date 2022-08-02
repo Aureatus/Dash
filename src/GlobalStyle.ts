@@ -10,6 +10,12 @@ const GlobalStyle = createGlobalStyle`
     color 0.8s ease;
 
   }
+  a:-webkit-any-link {
+    text-decoration: none;
+  }
+  * {
+    color: inherit;
+  }
 `;
 
 export default GlobalStyle;
