@@ -1,5 +1,8 @@
+import { signInWithPopup } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 import { useTheme } from 'styled-components';
 
+import { auth, provider } from '../../firebase/auth/auth';
 import {
   Container,
   NavContainer,
@@ -19,14 +22,24 @@ const LandingPage = () => {
 
   const themeName = themeChecker();
 
+  const navigate = useNavigate();
+
+  const googleSignIn = async () => {
+    try {
+      await signInWithPopup(auth, provider);
+      navigate('/home');
+    } catch (err) {
+      console.error(err);
+    }
+  };
   return (
     <Container>
       <NavContainer>
         <SignUpLink to={'/sign-up'}>Sign Up</SignUpLink>
         <SignInLink to={'/sign-in'}>Sign In</SignInLink>
       </NavContainer>
-      {themeName === 'light' && <SignInWithGoogleLight />}
-      {themeName === 'dark' && <SignInWithGoogleDark />}
+      {themeName === 'light' && <SignInWithGoogleLight onClick={googleSignIn} />}
+      {themeName === 'dark' && <SignInWithGoogleDark onClick={googleSignIn} />}
     </Container>
   );
 };
