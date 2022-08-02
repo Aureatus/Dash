@@ -87,6 +87,7 @@ const SignInWithGoogleLight = styled.button`
   background-image: url('btn_google_signin_light_normal_web@2x.png');
   background-size: contain;
   background-repeat: no-repeat;
+  transition: background-image 0.1s linear;
 
   &:hover {
     background-image: url('btn_google_signin_light_focus_web@2x.png');
@@ -107,6 +108,7 @@ const SignInWithGoogleDark = styled.button`
   background-image: url('btn_google_signin_dark_normal_web@2x.png');
   background-size: contain;
   background-repeat: no-repeat;
+  transition: background-image 0.1s linear;
 
   &:hover {
     background-image: url('btn_google_signin_dark_focus_web@2x.png');
