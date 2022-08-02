@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
 import DashHeader from './Components/DashHeader/DashHeader';
+import LandingPage from './Components/LandingPage/LandingPage';
 import ProtectedRoute from './Components/ProtectedRoute';
 import UserContext from './context/UserContext';
 import GlobalStyle from './GlobalStyle';
@@ -23,6 +24,7 @@ function App() {
           <DashHeader setTheme={setTheme}></DashHeader>
           <Routes>
             <Route index element={<Navigate to={'/landing'} />} />
+            <Route path="landing" element={<LandingPage />} />
             <Route element={<ProtectedRoute currentUser={null} redirectPath="landing" />}>
               <Route path="dashboard" element={<div>test</div>} />
             </Route>
