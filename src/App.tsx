@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 
 import DashHeader from './Components/DashHeader/DashHeader';
 import LandingPage from './Components/LandingPage/LandingPage';
+import LoadingPage from './Components/LoadingPage/LoadingPage';
 import ProtectedRoute from './Components/ProtectedRoute';
 import UserContext from './context/UserContext';
 import GlobalStyle from './GlobalStyle';
@@ -22,13 +23,19 @@ function App() {
       <UserContext.Provider value={user}>
         <Container>
           <DashHeader setTheme={setTheme}></DashHeader>
-          <Routes>
-            <Route index element={<Navigate to={'/landing'} />} />
-            <Route path="landing" element={<LandingPage />} />
-            <Route element={<ProtectedRoute currentUser={null} redirectPath="landing" />}>
-              <Route path="dashboard" element={<div>test</div>} />
-            </Route>
-          </Routes>
+          {loading ? (
+            <LoadingPage />
+          ) : (
+            <Routes>
+              <Route index element={<Navigate to={'/landing'} />} />
+              <Route path="landing" element={<LandingPage />} />
+              <Route
+                element={<ProtectedRoute currentUser={null} redirectPath="landing" />}
+              >
+                <Route path="dashboard" element={<div>test</div>} />
+              </Route>
+            </Routes>
+          )}
         </Container>
       </UserContext.Provider>
     </ThemeProvider>
