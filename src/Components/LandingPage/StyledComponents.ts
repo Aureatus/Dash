@@ -119,9 +119,44 @@ const SignInWithGoogleDark = styled.button`
   }
 `;
 
+const SignInAnonymousButton = styled.button`
+  box-sizing: border-box;
+  height: auto;
+  width: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: inherit;
+  margin-top: 1vh;
+
+  border-style: solid;
+  border-width: 2px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    to left,
+    ${({ theme }) => theme.accent.primary},
+    ${({ theme }) => theme.accent.secondary}
+  );
+
+  cursor: pointer;
+  padding: 0.4% 1.2%;
+
+  font-weight: 700;
+  font-size: calc(0.8vmax + 0.45rem);
+
+  white-space: nowrap;
+
+  &:hover {
+    backdrop-filter: invert(100%) opacity(0.2);
+  }
+`;
+
 export {
   Container,
   NavContainer,
+  SignInAnonymousButton,
   SignInLink,
   SignInWithGoogleDark,
   SignInWithGoogleLight,
