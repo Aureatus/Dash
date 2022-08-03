@@ -1,4 +1,4 @@
-import { signInWithPopup } from 'firebase/auth';
+import { signInAnonymously, signInWithPopup } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { useTheme } from 'styled-components';
 
@@ -6,6 +6,7 @@ import { auth, provider } from '../../firebase/auth/auth';
 import {
   Container,
   NavContainer,
+  SignInAnonymousButton,
   SignInLink,
   SignInWithGoogleDark,
   SignInWithGoogleLight,
@@ -32,6 +33,15 @@ const LandingPage = () => {
       console.error(err);
     }
   };
+
+  const anonymousSignIn = async () => {
+    try {
+      await signInAnonymously(auth);
+      navigate('/home');
+    } catch (err) {
+      console.error(err);
+    }
+  };
   return (
     <Container>
       <NavContainer>
@@ -40,6 +50,9 @@ const LandingPage = () => {
       </NavContainer>
       {themeName === 'light' && <SignInWithGoogleLight onClick={googleSignIn} />}
       {themeName === 'dark' && <SignInWithGoogleDark onClick={googleSignIn} />}
+      <SignInAnonymousButton onClick={anonymousSignIn}>
+        Sign in as guest
+      </SignInAnonymousButton>
     </Container>
   );
 };
