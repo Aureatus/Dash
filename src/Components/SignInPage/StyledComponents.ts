@@ -74,7 +74,22 @@ const StyledSubmitInput = styled.input`
   font-weight: 700;
 `;
 
-const ShowPasswordButton = styled.button`
+const ShowPasswordButtonDark = styled.button`
+  height: 100%;
+  width: 5%;
+  min-height: 24px;
+  min-width: 24px;
+  padding: 0;
+  background-color: inherit;
+  border: none;
+  background-image: url('visibility_FILL0_wght400_GRAD0_opsz48.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  filter: invert(100%);
+`;
+
+const ShowPasswordButtonLight = styled.button`
   height: 100%;
   width: 5%;
   min-height: 24px;
@@ -90,7 +105,8 @@ const ShowPasswordButton = styled.button`
 
 export {
   Container,
-  ShowPasswordButton,
+  ShowPasswordButtonDark,
+  ShowPasswordButtonLight,
   SignInForm,
   StyledInput,
   StyledLabel,
