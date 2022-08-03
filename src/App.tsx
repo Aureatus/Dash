@@ -30,7 +30,7 @@ function App() {
               <Route index element={<Navigate to={'/landing'} />} />
               <Route path="landing" element={<LandingPage />} />
               <Route
-                element={<ProtectedRoute currentUser={null} redirectPath="landing" />}
+                element={<ProtectedRoute currentUser={user} redirectPath="landing" />}
               >
                 <Route path="home" element={<div>test</div>} />
               </Route>
