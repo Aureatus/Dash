@@ -78,8 +78,8 @@ const SignInLink = styled(Link)`
 `;
 
 const SignInWithGoogleLight = styled.button`
-  width: 11vmax;
-  height: 2.8vmax;
+  width: calc(10vmax + 1.4rem);
+  height: calc(2vmax + 0.7rem);
   border: none;
   padding: 0;
   background-color: inherit;
@@ -87,6 +87,7 @@ const SignInWithGoogleLight = styled.button`
   background-image: url('btn_google_signin_light_normal_web@2x.png');
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   transition: background-image 0.1s linear;
 
   &:hover {
@@ -99,8 +100,8 @@ const SignInWithGoogleLight = styled.button`
 `;
 
 const SignInWithGoogleDark = styled.button`
-  width: 11vmax;
-  height: 2.8vmax;
+  width: calc(10vmax + 1.4rem);
+  height: calc(2vmax + 0.7rem);
   border: none;
   padding: 0;
   background-color: inherit;
@@ -108,6 +109,7 @@ const SignInWithGoogleDark = styled.button`
   background-image: url('btn_google_signin_dark_normal_web@2x.png');
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   transition: background-image 0.1s linear;
 
   &:hover {
