@@ -96,6 +96,7 @@ const ShowPasswordButtonLight = styled.button`
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  cursor: pointer;
 `;
 
 const ShowPasswordButtonDark = styled(ShowPasswordButtonLight)`
