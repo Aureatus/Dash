@@ -14,8 +14,9 @@ const ProtectedRoute = ({
   if (!currentUser) return <Navigate to={redirectPath} replace />;
   return (
     <>
-      {children ? children : <Outlet />} [// Renders children when ProtectedRoute is not
-      used as a Layout component.]
+      {children ? children : <Outlet />}
+      {/*Renders children when ProtectedRoute is not
+      used as a Layout component. */}
     </>
   );
 };
