@@ -63,6 +63,9 @@ const StyledSubmitInput = styled.input`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  cursor: pointer;
+
   border-style: solid;
   border-width: 2px;
   border-image-slice: 1;
@@ -75,6 +78,10 @@ const StyledSubmitInput = styled.input`
   padding: 1% 0%;
   font-size: calc(1vmax + 0.3rem);
   font-weight: 700;
+
+  &:hover {
+    backdrop-filter: invert(100%) opacity(0.1);
+  }
 `;
 
 const ShowPasswordButtonDark = styled.button`
