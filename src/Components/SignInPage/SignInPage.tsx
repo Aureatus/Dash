@@ -1,11 +1,13 @@
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTheme } from 'styled-components';
 
 import { auth } from '../../firebase/auth/auth';
 import {
   Container,
-  ShowPasswordButton,
+  ShowPasswordButtonDark,
+  ShowPasswordButtonLight,
   SignInForm,
   StyledInput,
   StyledLabel,
@@ -18,6 +20,15 @@ const SignInPage = () => {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
 
+  const theme = useTheme();
+
+  const themeChecker = () => {
+    if (theme.background.primary === '#ffffff') return 'light';
+    if (theme.background.primary === '#000000') return 'dark';
+  };
+
+  const themeName = themeChecker();
+
   const EmailSignIn = async () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
@@ -26,6 +37,9 @@ const SignInPage = () => {
       console.error(err);
     }
   };
+
+  const ShowPasswordButton =
+    themeName === 'light' ? ShowPasswordButtonLight : ShowPasswordButtonDark;
 
   return (
     <Container>
@@ -37,6 +51,7 @@ const SignInPage = () => {
       >
         <StyledLabel>
           <StyledInput
+            placeholder="email@gmail.com"
             type="email"
             value={email}
             required
@@ -47,6 +62,7 @@ const SignInPage = () => {
         </StyledLabel>
         <StyledLabel>
           <StyledInput
+            placeholder="Password"
             type={showPassword ? 'text' : 'password'}
             value={password}
             required
