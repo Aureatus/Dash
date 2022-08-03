@@ -32,7 +32,7 @@ function App() {
               <Route
                 element={<ProtectedRoute currentUser={null} redirectPath="landing" />}
               >
-                <Route path="dashboard" element={<div>test</div>} />
+                <Route path="home" element={<div>test</div>} />
               </Route>
             </Routes>
           )}
