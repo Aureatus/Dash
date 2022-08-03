@@ -1,3 +1,4 @@
+import { User as FirebaseUser } from 'firebase/auth';
 import { ReactElement } from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 
@@ -6,7 +7,7 @@ const ProtectedRoute = ({
   redirectPath,
   children,
 }: {
-  currentUser: string | null;
+  currentUser: FirebaseUser | null;
   redirectPath: string;
   children?: ReactElement;
 }) => {
