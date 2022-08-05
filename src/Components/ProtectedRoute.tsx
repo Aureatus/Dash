@@ -10,7 +10,6 @@ const ProtectedRoute = ({
   redirectPath: string;
   desiredUserStatus: null | true;
 }) => {
-  let componentJSX = <Outlet />;
   // Handles protection of authentication routes (sign-in, sign-up and landing)
   if (desiredUserStatus === null && currentUser)
     return <Navigate to={redirectPath} replace />;
@@ -18,7 +17,7 @@ const ProtectedRoute = ({
   // Handles protection of authenticated routes (home)
   if (desiredUserStatus === true && !currentUser)
     return <Navigate to={redirectPath} replace />;
-  else return componentJSX;
+  else return <Outlet />;
 };
 
 export default ProtectedRoute;
