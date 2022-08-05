@@ -6,6 +6,7 @@ import { useTheme } from 'styled-components';
 import { auth } from '../../firebase/auth/auth';
 import {
   Container,
+  FormHeader,
   ShowPasswordButtonDark,
   ShowPasswordButtonLight,
   SignInForm,
@@ -49,6 +50,7 @@ const SignInPage = () => {
           EmailSignIn();
         }}
       >
+        <FormHeader>Sign in</FormHeader>
         <StyledLabel>
           <StyledInput
             placeholder="email@gmail.com"
