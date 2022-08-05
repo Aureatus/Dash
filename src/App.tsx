@@ -29,12 +29,28 @@ function App() {
             <LoadingPage />
           ) : (
             <Routes>
-              <Route index element={<Navigate to={'/landing'} />} />
-              <Route path="landing" element={<LandingPage />} />
-              <Route path="sign-in" element={<SignInPage />} />
-              <Route path="sign-up" element={<SignUpPage />} />
               <Route
-                element={<ProtectedRoute currentUser={user} redirectPath="landing" />}
+                element={
+                  <ProtectedRoute
+                    currentUser={user}
+                    redirectPath="home"
+                    desiredUserStatus={null}
+                  />
+                }
+              >
+                <Route index element={<Navigate to={'/landing'} />} />
+                <Route path="landing" element={<LandingPage />} />
+                <Route path="sign-in" element={<SignInPage />} />
+                <Route path="sign-up" element={<SignUpPage />} />
+              </Route>
+              <Route
+                element={
+                  <ProtectedRoute
+                    currentUser={user}
+                    redirectPath="landing"
+                    desiredUserStatus={!null}
+                  />
+                }
               >
                 <Route path="home" element={<div>test</div>} />
               </Route>
