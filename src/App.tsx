@@ -6,6 +6,8 @@ import DashHeader from './Components/DashHeader/DashHeader';
 import LandingPage from './Components/LandingPage/LandingPage';
 import LoadingPage from './Components/LoadingPage/LoadingPage';
 import ProtectedRoute from './Components/ProtectedRoute';
+import SignInPage from './Components/SignInPage/SignInPage';
+import SignUpPage from './Components/SignUpPage/SignUpPage';
 import UserContext from './context/UserContext';
 import GlobalStyle from './GlobalStyle';
 import useAuthState from './hooks/useAuthState';
@@ -29,6 +31,8 @@ function App() {
             <Routes>
               <Route index element={<Navigate to={'/landing'} />} />
               <Route path="landing" element={<LandingPage />} />
+              <Route path="sign-in" element={<SignInPage />} />
+              <Route path="sign-up" element={<SignUpPage />} />
               <Route
                 element={<ProtectedRoute currentUser={user} redirectPath="landing" />}
               >
