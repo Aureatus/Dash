@@ -21,6 +21,34 @@ const SignInForm = styled.form`
   row-gap: 5%;
 `;
 
+const FormHeader = styled.h2`
+  margin: 0;
+  margin-bottom: 2%;
+  width: 90%;
+  align-self: start;
+
+  background: ${({ theme }) => theme.accent.secondary}; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    ${({ theme }) => theme.accent.secondary},
+    ${({ theme }) => theme.accent.primary}
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    ${({ theme }) => theme.accent.secondary},
+    ${({ theme }) => theme.accent.primary}
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 800;
+  font-size: calc(2vmax + 0.8rem);
+`;
+
 const StyledLabel = styled.label`
   width: 100%;
   display: flex;
@@ -105,6 +133,7 @@ const ShowPasswordButtonDark = styled(ShowPasswordButtonLight)`
 
 export {
   Container,
+  FormHeader,
   ShowPasswordButtonDark,
   ShowPasswordButtonLight,
   SignInForm,
