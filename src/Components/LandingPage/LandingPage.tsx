@@ -45,8 +45,8 @@ const LandingPage = () => {
   return (
     <Container>
       <NavContainer>
-        <SignUpLink to={'/sign-up'}>Sign Up</SignUpLink>
         <SignInLink to={'/sign-in'}>Sign In</SignInLink>
+        <SignUpLink to={'/sign-up'}>Sign Up</SignUpLink>
       </NavContainer>
       {themeName === 'light' && <SignInWithGoogleLight onClick={googleSignIn} />}
       {themeName === 'dark' && <SignInWithGoogleDark onClick={googleSignIn} />}
