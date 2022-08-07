@@ -21,4 +21,9 @@ const StyledForm = styled.form`
   height: 100%;
   width: 100%;
 `;
-export { HomeContainer, MessageContainer, StyledForm };
+
+const StyledLabel = styled.label`
+  height: 100%;
+  width: 100%;
+`;
+export { HomeContainer, MessageContainer, StyledForm, StyledLabel };
