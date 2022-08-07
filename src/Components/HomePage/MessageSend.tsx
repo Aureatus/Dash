@@ -3,7 +3,7 @@ import { useContext, useState } from 'react';
 
 import UserContext from '../../context/UserContext';
 import { db } from '../../firebase/firestore/firestore';
-import { StyledForm } from './StyledComponents';
+import { StyledForm, StyledLabel } from './StyledComponents';
 
 const MessageSend = () => {
   const user = useContext(UserContext);
@@ -22,7 +22,7 @@ const MessageSend = () => {
         }
       }}
     >
-      <label>
+      <StyledLabel>
         <input
           type="text"
           value={content}
@@ -35,7 +35,7 @@ const MessageSend = () => {
           required
           autoComplete="off"
         />
-      </label>
+      </StyledLabel>
     </StyledForm>
   );
 };
