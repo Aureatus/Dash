@@ -8,12 +8,7 @@ const MessageDisplay = ({
   return (
     <div>
       {messages.map((message) => {
-        return (
-          <div key={message.id}>
-            {message.content}
-            {message.uid}
-          </div>
-        );
+        return <div key={message.id}>{message.content}</div>;
       })}
     </div>
   );
