@@ -26,4 +26,11 @@ const StyledLabel = styled.label`
   height: 100%;
   width: 100%;
 `;
-export { HomeContainer, MessageContainer, StyledForm, StyledLabel };
+
+const StyledInput = styled.input`
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+`;
+export { HomeContainer, MessageContainer, StyledForm, StyledInput, StyledLabel };
