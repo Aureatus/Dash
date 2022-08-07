@@ -14,4 +14,11 @@ const MessageContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
-export { HomeContainer, MessageContainer };
+
+// MessageSend styles
+
+const StyledForm = styled.form`
+  height: 100%;
+  width: 100%;
+`;
+export { HomeContainer, MessageContainer, StyledForm };
