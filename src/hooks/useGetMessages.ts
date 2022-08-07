@@ -11,10 +11,10 @@ const useGetMessages = () => {
   const [error, setError] = useState<string>('');
 
   useEffect(() => {
-    const q = query(collection(db, 'messages'));
+    const messagesQuery = query(collection(db, 'messages'));
 
     onSnapshot(
-      q,
+      messagesQuery,
       (QuerySnapshot) => {
         const messages: { id: Key; content: String; uid: string }[] = [];
         QuerySnapshot.forEach((doc) => {
