@@ -33,4 +33,22 @@ const StyledInput = styled.input`
   padding: 0;
   box-sizing: border-box;
 `;
-export { HomeContainer, MessageContainer, StyledForm, StyledInput, StyledLabel };
+
+// MessageDisplay styles
+
+const MessageDisplayContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+`;
+export {
+  HomeContainer,
+  MessageContainer,
+  MessageDisplayContainer,
+  StyledForm,
+  StyledInput,
+  StyledLabel,
+};
