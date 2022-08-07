@@ -1,4 +1,10 @@
-import { collection, onSnapshot, query } from 'firebase/firestore';
+import {
+  collection,
+  DocumentData,
+  onSnapshot,
+  query,
+  QuerySnapshot,
+} from 'firebase/firestore';
 import { Key, useEffect, useState } from 'react';
 
 import { db } from '../firebase/firestore/firestore';
@@ -13,19 +19,23 @@ const useGetMessages = () => {
   useEffect(() => {
     const messagesQuery = query(collection(db, 'messages'));
 
+    const fetchMessages = (QuerySnapshot: any[] | QuerySnapshot<DocumentData>) => {
+      const messages: { id: Key; content: String; uid: string }[] = [];
+      QuerySnapshot.forEach((doc) => {
+        const content = doc.data().content;
+        const id: Key = doc.id;
+        const uid: string = doc.data().uid;
+        const message = { content: content, id: id, uid: uid };
+        messages.push(message);
+      });
+      setMessages(messages);
+      setLoading(false);
+    };
+
     onSnapshot(
       messagesQuery,
       (QuerySnapshot) => {
-        const messages: { id: Key; content: String; uid: string }[] = [];
-        QuerySnapshot.forEach((doc) => {
-          const content = doc.data().content;
-          const id: Key = doc.id;
-          const uid: string = doc.data().uid;
-          const message = { content: content, id: id, uid: uid };
-          messages.push(message);
-        });
-        setMessages(messages);
-        setLoading(false);
+        fetchMessages(QuerySnapshot);
       },
       (error) => {
         let message = 'Unknown Error';
