@@ -3,12 +3,13 @@ import { useContext, useState } from 'react';
 
 import UserContext from '../../context/UserContext';
 import { db } from '../../firebase/firestore/firestore';
+import { StyledForm } from './StyledComponents';
 
 const MessageSend = () => {
   const user = useContext(UserContext);
   const [content, setContent] = useState('');
   return (
-    <form
+    <StyledForm
       onSubmit={(e) => {
         e.preventDefault();
         try {
@@ -35,7 +36,7 @@ const MessageSend = () => {
           autoComplete="off"
         />
       </label>
-    </form>
+    </StyledForm>
   );
 };
 
