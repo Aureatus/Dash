@@ -30,13 +30,7 @@ function App() {
           ) : (
             <Routes>
               <Route
-                element={
-                  <ProtectedRoute
-                    currentUser={user}
-                    redirectPath="home"
-                    desiredUserStatus={null}
-                  />
-                }
+                element={<ProtectedRoute currentUser={user} desiredUserStatus={null} />}
               >
                 <Route index element={<Navigate to={'/landing'} />} />
                 <Route path="landing" element={<LandingPage />} />
@@ -44,13 +38,7 @@ function App() {
                 <Route path="sign-up" element={<SignUpPage />} />
               </Route>
               <Route
-                element={
-                  <ProtectedRoute
-                    currentUser={user}
-                    redirectPath="landing"
-                    desiredUserStatus={!null}
-                  />
-                }
+                element={<ProtectedRoute currentUser={user} desiredUserStatus={!null} />}
               >
                 <Route path="home" element={<div>test</div>} />
               </Route>
