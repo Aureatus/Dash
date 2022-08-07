@@ -1,22 +1,27 @@
 import { User as FirebaseUser } from 'firebase/auth';
-import { Navigate, Outlet } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 const ProtectedRoute = ({
   currentUser,
-  redirectPath,
   desiredUserStatus,
 }: {
   currentUser: FirebaseUser | null;
-  redirectPath: string;
   desiredUserStatus: null | true;
 }) => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Navigates back to last location in history stack
+    if (desiredUserStatus === null && currentUser) navigate(-1);
+    if (desiredUserStatus === true && !currentUser) navigate(-1);
+  }, []);
+
   // Handles protection of authentication routes (sign-in, sign-up and landing)
-  if (desiredUserStatus === null && currentUser)
-    return <Navigate to={redirectPath} replace />;
+  if (desiredUserStatus === null && currentUser) return null;
 
   // Handles protection of authenticated routes (home)
-  if (desiredUserStatus === true && !currentUser)
-    return <Navigate to={redirectPath} replace />;
+  if (desiredUserStatus === true && !currentUser) return null;
   else return <Outlet />;
 };
 
