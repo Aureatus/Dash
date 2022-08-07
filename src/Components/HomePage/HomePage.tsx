@@ -1,17 +1,18 @@
 import useGetMessages from '../../hooks/useGetMessages';
 import MessageDisplay from './MessageDisplay';
 import MessageSend from './MessageSend';
+import { HomeContainer } from './StyledComponents';
 
 const HomePage = () => {
   const [messages, loading, error] = useGetMessages();
 
-  if (loading) return <div>Loading</div>;
-  if (error) return <div>{error}</div>;
+  if (loading) return <HomeContainer>Loading</HomeContainer>;
+  if (error) return <HomeContainer>{error}</HomeContainer>;
   return (
-    <div>
+    <HomeContainer>
       <MessageDisplay messages={messages} />
       <MessageSend />
-    </div>
+    </HomeContainer>
   );
 };
 
