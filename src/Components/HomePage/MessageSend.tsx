@@ -3,7 +3,7 @@ import { useContext, useState } from 'react';
 
 import UserContext from '../../context/UserContext';
 import { db } from '../../firebase/firestore/firestore';
-import { StyledForm, StyledLabel } from './StyledComponents';
+import { StyledForm, StyledInput, StyledLabel } from './StyledComponents';
 
 const MessageSend = () => {
   const user = useContext(UserContext);
@@ -23,7 +23,7 @@ const MessageSend = () => {
       }}
     >
       <StyledLabel>
-        <input
+        <StyledInput
           type="text"
           value={content}
           onChange={(e) => {
