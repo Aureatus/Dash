@@ -1,7 +1,7 @@
 import useGetMessages from '../../hooks/useGetMessages';
 import MessageDisplay from './MessageDisplay';
 import MessageSend from './MessageSend';
-import { HomeContainer } from './StyledComponents';
+import { HomeContainer, MessageContainer } from './StyledComponents';
 
 const HomePage = () => {
   const [messages, loading, error] = useGetMessages();
@@ -10,8 +10,10 @@ const HomePage = () => {
   if (error) return <HomeContainer>{error}</HomeContainer>;
   return (
     <HomeContainer>
-      <MessageDisplay messages={messages} />
-      <MessageSend />
+      <MessageContainer>
+        <MessageDisplay messages={messages} />
+        <MessageSend />
+      </MessageContainer>
     </HomeContainer>
   );
 };
