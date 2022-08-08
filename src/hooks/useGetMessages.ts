@@ -22,14 +22,26 @@ const useGetMessages = () => {
     const messagesQuery = query(collection(db, 'messages'), orderBy('timestamp', 'desc'));
 
     const fetchMessages = (QuerySnapshot: any[] | QuerySnapshot<DocumentData>) => {
-      const messages: { id: Key; content: String; uid: string; timestamp: Timestamp }[] =
-        [];
+      const messages: {
+        id: Key;
+        content: String;
+        uid: string;
+        timestamp: Timestamp;
+        profilePicture: string | null;
+      }[] = [];
       QuerySnapshot.forEach((doc) => {
         const content = doc.data().content;
         const id: Key = doc.id;
         const uid: string = doc.data().uid;
         const timestamp: Timestamp = doc.data().timestamp;
-        const message = { content: content, id: id, uid: uid, timestamp: timestamp };
+        const profilePicture = doc.data().profilePicture;
+        const message = {
+          content: content,
+          id: id,
+          uid: uid,
+          timestamp: timestamp,
+          profilePicture: profilePicture,
+        };
         messages.push(message);
       });
       setMessages(messages);
