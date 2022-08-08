@@ -9,6 +9,7 @@ const HomeContainer = styled.div`
 const MessageContainer = styled.div`
   height: 100%;
   width: 40%;
+  min-width: 320px;
   display: grid;
   grid-template: 90% 10% / 1fr;
   justify-content: center;
@@ -61,7 +62,6 @@ const ProfilePicture = styled.img`
 
   grid-area: 1 / 1 / span 2 / span 1;
 
-  justify-self: center;
   align-self: center;
 `;
 
