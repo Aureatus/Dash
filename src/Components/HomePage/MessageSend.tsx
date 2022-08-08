@@ -1,4 +1,4 @@
-import { addDoc, collection } from 'firebase/firestore';
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { useContext, useState } from 'react';
 
 import UserContext from '../../context/UserContext';
@@ -16,6 +16,7 @@ const MessageSend = () => {
           addDoc(collection(db, 'messages'), {
             content: content,
             uid: user?.uid,
+            timestamp: serverTimestamp(),
           });
         } catch (error) {
           console.log(error);
