@@ -44,8 +44,17 @@ const MessageDisplayContainer = styled.div`
   align-items: flex-start;
   overflow-y: scroll;
 `;
+
+const Message = styled.div`
+  min-height: 10%;
+  width: 100%;
+
+  display: grid;
+  grid-template: 1fr 1fr / 15% 85%;
+`;
 export {
   HomeContainer,
+  Message,
   MessageContainer,
   MessageDisplayContainer,
   StyledForm,
