@@ -36,7 +36,7 @@ const useGetMessages = () => {
       setLoading(false);
     };
 
-    onSnapshot(
+    const unsub = onSnapshot(
       messagesQuery,
       (QuerySnapshot) => {
         fetchMessages(QuerySnapshot);
@@ -49,6 +49,10 @@ const useGetMessages = () => {
         setLoading(false);
       },
     );
+
+    return () => {
+      unsub();
+    };
   }, []);
   return [messages, loading, error] as const;
 };
