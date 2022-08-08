@@ -1,7 +1,12 @@
 import { Timestamp } from 'firebase/firestore';
 import { Key } from 'react';
 
-import { Message, MessageDisplayContainer, ProfilePicture } from './StyledComponents';
+import {
+  Message,
+  MessageDisplayContainer,
+  ProfilePicture,
+  UserName,
+} from './StyledComponents';
 
 const MessageDisplay = ({
   messages,
@@ -12,6 +17,7 @@ const MessageDisplay = ({
     uid: string;
     timestamp: Timestamp;
     profilePicture: string | null;
+    userName: string | null;
   }[];
 }) => {
   return (
@@ -27,6 +33,7 @@ const MessageDisplay = ({
                   : 'https://cdn-icons.flaticon.com/png/512/3177/premium/3177440.png?token=exp=1659984790~hmac=5640feba3b7768fc54406a6105415c39'
               }
             />
+            <UserName>{message.userName ? message.userName : 'Anonymous'}</UserName>
           </Message>
         );
       })}
