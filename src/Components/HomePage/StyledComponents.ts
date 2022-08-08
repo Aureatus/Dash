@@ -65,6 +65,13 @@ const ProfilePicture = styled.img`
   align-self: center;
 `;
 
+const UserName = styled.h2`
+  grid-area: 1 / 2 / span 1 / span 1;
+
+  margin: 0;
+  font-size: 1.2em;
+`;
+
 export {
   HomeContainer,
   Message,
@@ -74,4 +81,5 @@ export {
   StyledForm,
   StyledInput,
   StyledLabel,
+  UserName,
 };
