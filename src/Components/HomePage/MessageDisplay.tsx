@@ -1,3 +1,4 @@
+import { Timestamp } from 'firebase/firestore';
 import { Key } from 'react';
 
 import { MessageDisplayContainer } from './StyledComponents';
@@ -5,7 +6,7 @@ import { MessageDisplayContainer } from './StyledComponents';
 const MessageDisplay = ({
   messages,
 }: {
-  messages: { id: Key; content: String; uid: string }[];
+  messages: { id: Key; content: String; uid: string; timestamp: Timestamp }[];
 }) => {
   return (
     <MessageDisplayContainer>
