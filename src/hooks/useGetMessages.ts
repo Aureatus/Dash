@@ -13,7 +13,13 @@ import { db } from '../firebase/firestore/firestore';
 
 const useGetMessages = () => {
   const [messages, setMessages] = useState<
-    { id: Key; content: String; uid: string; timestamp: Timestamp }[]
+    {
+      id: Key;
+      content: String;
+      uid: string;
+      timestamp: Timestamp;
+      profilePicture: string | null;
+    }[]
   >([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string>('');
