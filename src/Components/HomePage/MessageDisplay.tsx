@@ -8,7 +8,7 @@ const MessageDisplay = ({
 }: {
   messages: {
     id: Key;
-    content: String;
+    content: string;
     uid: string;
     timestamp: Timestamp;
     profilePicture: string | null;
