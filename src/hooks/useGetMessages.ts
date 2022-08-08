@@ -19,6 +19,7 @@ const useGetMessages = () => {
       uid: string;
       timestamp: Timestamp;
       profilePicture: string | null;
+      userName: string | null;
     }[]
   >([]);
   const [loading, setLoading] = useState(true);
@@ -34,6 +35,7 @@ const useGetMessages = () => {
         uid: string;
         timestamp: Timestamp;
         profilePicture: string | null;
+        userName: string | null;
       }[] = [];
       QuerySnapshot.forEach((doc) => {
         const content = doc.data().content;
@@ -41,12 +43,14 @@ const useGetMessages = () => {
         const uid: string = doc.data().uid;
         const timestamp: Timestamp = doc.data().timestamp;
         const profilePicture = doc.data().profilePicture;
+        const userName = doc.data().userName;
         const message = {
           content: content,
           id: id,
           uid: uid,
           timestamp: timestamp,
           profilePicture: profilePicture,
+          userName: userName,
         };
         messages.push(message);
       });
