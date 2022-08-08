@@ -40,9 +40,9 @@ const MessageDisplayContainer = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  flex-direction: column-reverse;
   align-items: flex-start;
+  overflow-y: scroll;
 `;
 export {
   HomeContainer,
