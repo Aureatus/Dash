@@ -17,6 +17,7 @@ const MessageSend = () => {
             content: content,
             uid: user?.uid,
             timestamp: serverTimestamp(),
+            profilePicture: user?.photoURL,
           });
         } catch (error) {
           console.log(error);
