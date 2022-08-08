@@ -42,7 +42,7 @@ const MessageDisplayContainer = styled.div`
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-start;
-  overflow-y: scroll;
+  overflow: auto;
 `;
 
 const Message = styled.div`
