@@ -15,7 +15,7 @@ const useGetMessages = () => {
   const [messages, setMessages] = useState<
     {
       id: Key;
-      content: String;
+      content: string;
       uid: string;
       timestamp: Timestamp;
       profilePicture: string | null;
@@ -30,7 +30,7 @@ const useGetMessages = () => {
     const fetchMessages = (QuerySnapshot: any[] | QuerySnapshot<DocumentData>) => {
       const messages: {
         id: Key;
-        content: String;
+        content: string;
         uid: string;
         timestamp: Timestamp;
         profilePicture: string | null;
