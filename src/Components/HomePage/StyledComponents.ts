@@ -51,7 +51,7 @@ const Message = styled.div`
   width: 100%;
 
   display: grid;
-  grid-template: 1fr 1fr / 15% 85%;
+  grid-template: 1fr 1fr / 10% 90%;
 `;
 
 const ProfilePicture = styled.img`
