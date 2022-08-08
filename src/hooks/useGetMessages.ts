@@ -12,9 +12,9 @@ import { Key, useEffect, useState } from 'react';
 import { db } from '../firebase/firestore/firestore';
 
 const useGetMessages = () => {
-  const [messages, setMessages] = useState<{ id: Key; content: String; uid: string }[]>(
-    [],
-  );
+  const [messages, setMessages] = useState<
+    { id: Key; content: String; uid: string; timestamp: Timestamp }[]
+  >([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string>('');
 
@@ -22,7 +22,8 @@ const useGetMessages = () => {
     const messagesQuery = query(collection(db, 'messages'), orderBy('timestamp', 'desc'));
 
     const fetchMessages = (QuerySnapshot: any[] | QuerySnapshot<DocumentData>) => {
-      const messages: { id: Key; content: String; uid: string }[] = [];
+      const messages: { id: Key; content: String; uid: string; timestamp: Timestamp }[] =
+        [];
       QuerySnapshot.forEach((doc) => {
         const content = doc.data().content;
         const id: Key = doc.id;
