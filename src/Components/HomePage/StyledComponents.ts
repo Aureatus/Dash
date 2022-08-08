@@ -52,11 +52,25 @@ const Message = styled.div`
   display: grid;
   grid-template: 1fr 1fr / 15% 85%;
 `;
+
+const ProfilePicture = styled.img`
+  height: 48px;
+  width: auto;
+
+  border-radius: 999px;
+
+  grid-area: 1 / 1 / span 2 / span 1;
+
+  justify-self: center;
+  align-self: center;
+`;
+
 export {
   HomeContainer,
   Message,
   MessageContainer,
   MessageDisplayContainer,
+  ProfilePicture,
   StyledForm,
   StyledInput,
   StyledLabel,
