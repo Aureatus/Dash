@@ -1,7 +1,7 @@
 import { Timestamp } from 'firebase/firestore';
 import { Key } from 'react';
 
-import { MessageDisplayContainer } from './StyledComponents';
+import { Message, MessageDisplayContainer } from './StyledComponents';
 
 const MessageDisplay = ({
   messages,
@@ -11,7 +11,7 @@ const MessageDisplay = ({
   return (
     <MessageDisplayContainer>
       {messages.map((message) => {
-        return <div key={message.id}>{message.content}</div>;
+        return <Message key={message.id}>{message.content}</Message>;
       })}
     </MessageDisplayContainer>
   );
