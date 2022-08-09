@@ -75,6 +75,12 @@ const UserName = styled.h2`
   white-space: nowrap;
 `;
 
+const TimeStamp = styled.h3`
+  grid-area: 1 / 3 / span 1 / span 1;
+
+  margin: 0;
+`;
+
 const MessageText = styled.p`
   grid-area: 2 / 2 / span 1 / span 2;
 
@@ -91,5 +97,6 @@ export {
   StyledForm,
   StyledInput,
   StyledLabel,
+  TimeStamp,
   UserName,
 };
