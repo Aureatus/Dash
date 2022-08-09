@@ -85,6 +85,10 @@ const TimeStamp = styled.time`
   grid-area: 1 / 3 / span 1 / span 1;
 
   margin: 0;
+
+  font-weight: 300;
+  font-size: calc(0.5vmax + 0.3rem);
+  line-height: 1.5;
 `;
 
 const MessageText = styled.p`
