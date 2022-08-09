@@ -77,7 +77,7 @@ const UserName = styled.h2`
   white-space: nowrap;
 `;
 
-const TimeStamp = styled.h3`
+const TimeStamp = styled.time`
   grid-area: 1 / 3 / span 1 / span 1;
 
   margin: 0;
