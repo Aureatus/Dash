@@ -53,7 +53,7 @@ const Message = styled.div`
   width: 100%;
 
   display: grid;
-  grid-template: 1fr 1fr / 10% min-content auto;
+  grid-template: 1fr 2fr / 10% min-content auto;
 
   column-gap: 2%;
 `;
