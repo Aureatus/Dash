@@ -54,6 +54,16 @@ const Message = styled.div`
 
   display: grid;
   grid-template: 1fr 2fr / 10% min-content auto;
+
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 1px;
+  border-image: linear-gradient(
+      to right,
+      ${({ theme }) => theme.accent.primary},
+      ${({ theme }) => theme.accent.secondary}
+    )
+    0% 0 100% 0/3px 0 1px 0 stretch;
 `;
 
 const ProfilePicture = styled.img`
