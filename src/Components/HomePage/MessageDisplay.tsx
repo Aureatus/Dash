@@ -4,6 +4,7 @@ import { Key } from 'react';
 import {
   Message,
   MessageDisplayContainer,
+  MessageText,
   ProfilePicture,
   UserName,
 } from './StyledComponents';
@@ -25,7 +26,6 @@ const MessageDisplay = ({
       {messages.map((message) => {
         return (
           <Message key={message.id}>
-            {message.content}
             <ProfilePicture
               src={
                 message.profilePicture
@@ -34,6 +34,7 @@ const MessageDisplay = ({
               }
             />
             <UserName>{message.userName ? message.userName : 'Anonymous'}</UserName>
+            <MessageText>{message.content}</MessageText>
           </Message>
         );
       })}
