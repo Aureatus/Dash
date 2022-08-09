@@ -37,6 +37,7 @@ const MessageSend = () => {
           }}
           required
           autoComplete="off"
+          placeholder="Type message"
         />
       </StyledLabel>
     </StyledForm>
