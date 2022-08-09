@@ -76,6 +76,14 @@ const MessageDisplayContainer = styled.div`
     );
     filter: invert(100%);
   }
+
+  scrollbar-color: linear-gradient(
+      to top,
+      ${({ theme }) => theme.accent.secondary},
+      ${({ theme }) => theme.accent.primary}
+    )
+    inherit;
+  scrollbar-width: thin;
 `;
 
 const Message = styled.div`
