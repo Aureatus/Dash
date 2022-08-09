@@ -56,6 +56,7 @@ const Message = styled.div`
 
 const ProfilePicture = styled.img`
   height: auto;
+  max-height: 48px;
   max-width: 100%;
 
   border-radius: 999px;
