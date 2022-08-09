@@ -43,6 +43,8 @@ const MessageDisplayContainer = styled.div`
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-start;
+  row-gap: 1%;
+
   overflow: auto;
 `;
 
