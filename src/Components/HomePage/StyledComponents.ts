@@ -74,7 +74,6 @@ const MessageDisplayContainer = styled.div`
       ${({ theme }) => theme.accent.secondary},
       ${({ theme }) => theme.accent.primary}
     );
-    filter: invert(100%);
   }
 
   scrollbar-color: linear-gradient(
