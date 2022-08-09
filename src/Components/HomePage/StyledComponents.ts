@@ -51,7 +51,7 @@ const Message = styled.div`
   width: 100%;
 
   display: grid;
-  grid-template: 1fr 1fr / 10% 90%;
+  grid-template: 1fr 1fr / 10% min-content auto;
 `;
 
 const ProfilePicture = styled.img`
@@ -71,10 +71,12 @@ const UserName = styled.h2`
 
   margin: 0;
   font-size: 1.2em;
+
+  white-space: nowrap;
 `;
 
 const MessageText = styled.p`
-  grid-area: 2 / 2 / span 1 / span 1;
+  grid-area: 2 / 2 / span 1 / span 2;
 
   margin: 0;
 `;
