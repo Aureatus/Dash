@@ -74,7 +74,9 @@ const UserName = styled.h2`
   grid-area: 1 / 2 / span 1 / span 1;
 
   margin: 0;
-  font-size: 1.2em;
+  font-weight: 400;
+  font-size: calc(0.8vmax + 0.3rem);
+  line-height: 1;
 
   white-space: nowrap;
 `;
