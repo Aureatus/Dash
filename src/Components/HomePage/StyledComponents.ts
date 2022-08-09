@@ -51,6 +51,31 @@ const MessageDisplayContainer = styled.div`
   row-gap: 1%;
 
   overflow: auto;
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: inherit;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      to top,
+      ${({ theme }) => theme.accent.secondary},
+      ${({ theme }) => theme.accent.primary}
+    );
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+      to bottom,
+      ${({ theme }) => theme.accent.secondary},
+      ${({ theme }) => theme.accent.primary}
+    );
+    filter: invert(100%);
+  }
 `;
 
 const Message = styled.div`
