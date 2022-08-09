@@ -1,11 +1,13 @@
 import { Timestamp } from 'firebase/firestore';
 import { Key } from 'react';
 
+import getMessageTime from '../../Utilities/getMessageTime';
 import {
   Message,
   MessageDisplayContainer,
   MessageText,
   ProfilePicture,
+  TimeStamp,
   UserName,
 } from './StyledComponents';
 
@@ -34,6 +36,7 @@ const MessageDisplay = ({
               }
             />
             <UserName>{message.userName ? message.userName : 'Anonymous'}</UserName>
+            <TimeStamp>{getMessageTime(message.timestamp.seconds)}</TimeStamp>
             <MessageText>{message.content}</MessageText>
           </Message>
         );
