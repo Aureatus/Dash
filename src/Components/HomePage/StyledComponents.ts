@@ -33,6 +33,11 @@ const StyledInput = styled.input`
   width: 100%;
   padding: 0;
   box-sizing: border-box;
+
+  background-color: inherit;
+
+  border: none;
+  outline: none;
 `;
 
 // MessageDisplay styles
