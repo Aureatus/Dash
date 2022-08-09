@@ -54,8 +54,6 @@ const Message = styled.div`
 
   display: grid;
   grid-template: 1fr 2fr / 10% min-content auto;
-
-  column-gap: 2%;
 `;
 
 const ProfilePicture = styled.img`
