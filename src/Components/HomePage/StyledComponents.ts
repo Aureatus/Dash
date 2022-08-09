@@ -60,14 +60,14 @@ const Message = styled.div`
 
 const ProfilePicture = styled.img`
   height: auto;
-  max-height: 48px;
+  max-height: 64px;
   max-width: 100%;
 
   border-radius: 999px;
 
   grid-area: 1 / 1 / span 2 / span 1;
 
-  align-self: center;
+  align-self: flex-start;
 `;
 
 const UserName = styled.h2`
