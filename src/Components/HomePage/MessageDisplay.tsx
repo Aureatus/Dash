@@ -26,6 +26,9 @@ const MessageDisplay = ({
   return (
     <MessageDisplayContainer>
       {messages.map((message) => {
+        const { prefix, time } = message.timestamp?.seconds
+          ? getMessageTime(message.timestamp.seconds)
+          : { prefix: 'loading', time: '' };
         return (
           <Message key={message.id}>
             <ProfilePicture
@@ -36,7 +39,7 @@ const MessageDisplay = ({
               }
             />
             <UserName>{message.userName ? message.userName : 'Anonymous'}</UserName>
-            <TimeStamp>{getMessageTime(message.timestamp.seconds)}</TimeStamp>
+            <TimeStamp>{prefix + time}</TimeStamp>
             <MessageText>{message.content}</MessageText>
           </Message>
         );
