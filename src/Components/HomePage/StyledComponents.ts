@@ -73,11 +73,18 @@ const UserName = styled.h2`
   font-size: 1.2em;
 `;
 
+const MessageText = styled.p`
+  grid-area: 2 / 2 / span 1 / span 1;
+
+  margin: 0;
+`;
+
 export {
   HomeContainer,
   Message,
   MessageContainer,
   MessageDisplayContainer,
+  MessageText,
   ProfilePicture,
   StyledForm,
   StyledInput,
