@@ -26,6 +26,8 @@ const StyledForm = styled.form`
 const StyledLabel = styled.label`
   height: 100%;
   width: 100%;
+
+  display: flex;
 `;
 
 const StyledInput = styled.input`
