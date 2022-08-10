@@ -119,7 +119,7 @@ const UserName = styled.h2`
   grid-area: 1 / 2 / span 1 / span 1;
 
   margin: 0;
-  font-weight: 400;
+  font-weight: 600;
   font-size: calc(0.8vmax + 0.3rem);
   line-height: 1;
 
