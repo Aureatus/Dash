@@ -144,6 +144,7 @@ const MessageText = styled.p`
 
   font-weight: 400;
   font-size: calc(0.8vmax + 0.3rem);
+  word-break: break-word;
 `;
 
 export {
