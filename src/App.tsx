@@ -26,7 +26,7 @@ function App() {
         <Container>
           <DashHeader setTheme={setTheme}></DashHeader>
           {loading ? (
-            <LoadingPage />
+            <LoadingPage text="User loading..." />
           ) : (
             <Routes>
               <Route
@@ -36,11 +36,6 @@ function App() {
                 <Route path="landing" element={<LandingPage />} />
                 <Route path="sign-in" element={<SignInPage />} />
                 <Route path="sign-up" element={<SignUpPage />} />
-              </Route>
-              <Route
-                element={<ProtectedRoute currentUser={user} desiredUserStatus={!null} />}
-              >
-                <Route path="home" element={<div>test</div>} />
               </Route>
             </Routes>
           )}
