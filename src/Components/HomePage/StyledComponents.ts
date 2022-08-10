@@ -32,7 +32,7 @@ const StyledLabel = styled.label`
 
 const StyledInput = styled.input`
   height: 100%;
-  width: 100%;
+  width: auto;
   padding: 0;
   box-sizing: border-box;
 
