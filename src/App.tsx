@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
 import DashHeader from './Components/DashHeader/DashHeader';
+import HomePage from './Components/HomePage/HomePage';
 import LandingPage from './Components/LandingPage/LandingPage';
 import LoadingPage from './Components/LoadingPage/LoadingPage';
 import ProtectedRoute from './Components/ProtectedRoute';
@@ -36,6 +37,11 @@ function App() {
                 <Route path="landing" element={<LandingPage />} />
                 <Route path="sign-in" element={<SignInPage />} />
                 <Route path="sign-up" element={<SignUpPage />} />
+              </Route>
+              <Route
+                element={<ProtectedRoute currentUser={user} desiredUserStatus={!null} />}
+              >
+                <Route path="home" element={<HomePage />} />
               </Route>
             </Routes>
           )}
