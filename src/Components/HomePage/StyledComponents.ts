@@ -18,6 +18,8 @@ const MessageContainer = styled.div`
   align-items: center;
 `;
 
+const Footer = styled.footer``;
+
 // MessageSend styles
 
 const StyledForm = styled.form`
@@ -162,6 +164,7 @@ const MessageText = styled.p`
 `;
 
 export {
+  Footer,
   HomeContainer,
   InputErrorMessage,
   Message,
