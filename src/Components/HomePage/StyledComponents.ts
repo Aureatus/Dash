@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
 const HomeContainer = styled.div`
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template: 97% auto / 1fr;
+  justify-items: center;
   align-items: center;
-
-  flex-direction: column;
 `;
 
 const MessageContainer = styled.div`
