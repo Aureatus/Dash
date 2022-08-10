@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { Container, LoadingText, SpinningLogo } from './StyledComponents';
 
-const LoadingPage = () => {
+const LoadingPage = ({ text }: { text: string }) => {
   const [pageContent, setPageContent] = useState<any>(null);
 
   useEffect(() => {
@@ -10,7 +10,7 @@ const LoadingPage = () => {
       setPageContent(
         <Container>
           <SpinningLogo src="bolt-svgrepo-com.svg" />
-          <LoadingText>Loading...</LoadingText>
+          <LoadingText>{text}</LoadingText>
         </Container>,
       );
     }, 300);
