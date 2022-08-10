@@ -86,11 +86,11 @@ const MessageDisplayContainer = styled.div`
 `;
 
 const Message = styled.div`
-  min-height: 10%;
+  height: auto;
   width: 100%;
 
   display: grid;
-  grid-template: 1fr 2fr / 10% min-content auto;
+  grid-template: auto 1fr / 10% min-content auto;
 
   box-sizing: border-box;
   border-style: solid;
