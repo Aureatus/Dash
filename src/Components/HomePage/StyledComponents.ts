@@ -28,6 +28,10 @@ const Footer = styled.footer`
   align-items: center;
 `;
 
+const Attribution = styled.a`
+  font-weight: 300;
+`;
+
 // MessageSend styles
 
 const StyledForm = styled.form`
@@ -172,6 +176,7 @@ const MessageText = styled.p`
 `;
 
 export {
+  Attribution,
   Footer,
   HomeContainer,
   InputErrorMessage,
