@@ -13,7 +13,7 @@ import UserContext from './context/UserContext';
 import GlobalStyle from './GlobalStyle';
 import useAuthState from './hooks/useAuthState';
 import { Container } from './StyledComponents';
-import { darkTheme, lightTheme } from './themes';
+import { lightTheme } from './themes';
 
 function App() {
   const [theme, setTheme] = useState(lightTheme);
