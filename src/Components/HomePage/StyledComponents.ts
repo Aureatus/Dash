@@ -20,6 +20,7 @@ const MessageContainer = styled.div`
 const Footer = styled.footer`
   height: 100%;
   width: 40%;
+  min-width: 320px;
   box-sizing: border-box;
   border-top: 1px solid ${({ theme }) => theme.text.primary};
 
