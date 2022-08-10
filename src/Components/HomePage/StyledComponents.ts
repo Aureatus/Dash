@@ -141,6 +141,9 @@ const MessageText = styled.p`
   grid-area: 2 / 2 / span 1 / span 2;
 
   margin: 0;
+
+  font-weight: 400;
+  font-size: calc(0.8vmax + 0.3rem);
 `;
 
 export {
