@@ -40,6 +40,16 @@ const StyledInput = styled.input`
   outline: none;
 `;
 
+const InputErrorMessage = styled.aside`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: red;
+  font-weight: 700;
+  white-space: nowrap;
+`;
+
 // MessageDisplay styles
 
 const MessageDisplayContainer = styled.div`
@@ -149,6 +159,7 @@ const MessageText = styled.p`
 
 export {
   HomeContainer,
+  InputErrorMessage,
   Message,
   MessageContainer,
   MessageDisplayContainer,
