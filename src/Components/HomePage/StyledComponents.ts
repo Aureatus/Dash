@@ -17,7 +17,16 @@ const MessageContainer = styled.div`
   align-items: center;
 `;
 
-const Footer = styled.footer``;
+const Footer = styled.footer`
+  height: 100%;
+  width: 40%;
+  box-sizing: border-box;
+  border-top: 1px solid ${({ theme }) => theme.text.primary};
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 // MessageSend styles
 
