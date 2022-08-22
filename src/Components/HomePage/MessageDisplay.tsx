@@ -32,7 +32,7 @@ const MessageDisplay = ({
         return (
           <Message key={message.id}>
             <ProfilePicture
-              src={message.profilePicture ? message.profilePicture : '/person.png'}
+              src={message.profilePicture ? message.profilePicture : '/user.png'}
             />
             <UserName>{message.userName ? message.userName : 'Anonymous'}</UserName>
             <TimeStamp>{prefix + time}</TimeStamp>
