@@ -25,34 +25,40 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Suspense fallback={<LoadingPage text="Loading..." />}>
-        <UserContext.Provider value={user}>
-          <Container>
+      <UserContext.Provider value={user}>
+        <Container>
+          <Suspense fallback={<LoadingPage text="Loading..." />}>
             <DashHeader setTheme={setTheme}></DashHeader>
-            {loading ? (
-              <LoadingPage text="User loading..." />
-            ) : (
-              <Routes>
-                <Route
-                  element={<ProtectedRoute currentUser={user} desiredUserStatus={null} />}
-                >
-                  <Route index element={<Navigate to={'/landing'} />} />
-                  <Route path="landing" element={<LandingPage />} />
-                  <Route path="sign-in" element={<SignInPage />} />
-                  <Route path="sign-up" element={<SignUpPage />} />
-                </Route>
-                <Route
-                  element={
-                    <ProtectedRoute currentUser={user} desiredUserStatus={!null} />
-                  }
-                >
-                  <Route path="home" element={<HomePage />} />
-                </Route>
-              </Routes>
-            )}
-          </Container>
-        </UserContext.Provider>
-      </Suspense>
+          </Suspense>
+          {loading ? (
+            <LoadingPage text="User loading..." />
+          ) : (
+            <Routes>
+              <Route
+                element={
+                  <Suspense fallback={<LoadingPage text="Loading..." />}>
+                    <ProtectedRoute currentUser={user} desiredUserStatus={null} />{' '}
+                  </Suspense>
+                }
+              >
+                <Route index element={<Navigate to={'/landing'} />} />
+                <Route path="landing" element={<LandingPage />} />
+                <Route path="sign-in" element={<SignInPage />} />
+                <Route path="sign-up" element={<SignUpPage />} />
+              </Route>
+              <Route
+                element={
+                  <Suspense fallback={<LoadingPage text="Loading..." />}>
+                    <ProtectedRoute currentUser={user} desiredUserStatus={!null} />{' '}
+                  </Suspense>
+                }
+              >
+                <Route path="home" element={<HomePage />} />
+              </Route>
+            </Routes>
+          )}
+        </Container>
+      </UserContext.Provider>
     </ThemeProvider>
   );
 }
