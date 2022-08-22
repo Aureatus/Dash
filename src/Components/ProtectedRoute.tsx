@@ -15,12 +15,12 @@ const ProtectedRoute = ({
     // Navigates back to last location in history stack
     if (desiredUserStatus === null && currentUser) {
       if (window.history.length <= 1) {
-        navigate('/home');
+        navigate('/home', { replace: true });
       } else navigate(-1);
     }
     if (desiredUserStatus === true && !currentUser)
       if (window.history.length <= 1) {
-        navigate('/landing');
+        navigate('/landing', { replace: true });
       } else navigate(-1);
   }, []);
 
