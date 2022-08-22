@@ -21,8 +21,11 @@ const HomePage = () => {
         <MessageSend />
       </MessageContainer>
       <Footer>
-        <Attribution href="https://www.flaticon.com/free-icons/user" title="user icons">
-          User icons created by kmg design - Flaticon
+        <Attribution
+          href="https://www.flaticon.com/free-icons/person"
+          title="person icons"
+        >
+          Person icons created by Digby Garrett - Flaticon
         </Attribution>
       </Footer>
     </HomeContainer>
