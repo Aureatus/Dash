@@ -32,11 +32,7 @@ const MessageDisplay = ({
         return (
           <Message key={message.id}>
             <ProfilePicture
-              src={
-                message.profilePicture
-                  ? message.profilePicture
-                  : 'https://cdn-icons.flaticon.com/png/512/3177/premium/3177440.png?token=exp=1659984790~hmac=5640feba3b7768fc54406a6105415c39'
-              }
+              src={message.profilePicture ? message.profilePicture : '/person.png'}
             />
             <UserName>{message.userName ? message.userName : 'Anonymous'}</UserName>
             <TimeStamp>{prefix + time}</TimeStamp>
