@@ -13,8 +13,15 @@ const ProtectedRoute = ({
 
   useEffect(() => {
     // Navigates back to last location in history stack
-    if (desiredUserStatus === null && currentUser) navigate(-1);
-    if (desiredUserStatus === true && !currentUser) navigate(-1);
+    if (desiredUserStatus === null && currentUser) {
+      if (window.history.length <= 1) {
+        navigate('/home');
+      } else navigate(-1);
+    }
+    if (desiredUserStatus === true && !currentUser)
+      if (window.history.length <= 1) {
+        navigate('/landing');
+      } else navigate(-1);
   }, []);
 
   // Handles protection of authentication routes (sign-in, sign-up and landing)
