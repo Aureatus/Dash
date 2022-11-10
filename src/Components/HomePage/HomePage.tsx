@@ -1,5 +1,4 @@
 import useGetMessages from '../../hooks/useGetMessages';
-import LoadingPage from '../LoadingPage/LoadingPage';
 import MessageDisplay from './MessageDisplay';
 import MessageSend from './MessageSend';
 import { Attribution, Footer, HomeContainer, MessageContainer } from './StyledComponents';
@@ -7,12 +6,7 @@ import { Attribution, Footer, HomeContainer, MessageContainer } from './StyledCo
 const HomePage = () => {
   const [messages, loading, error] = useGetMessages();
 
-  if (loading)
-    return (
-      <HomeContainer>
-        <LoadingPage text={'Messages loading...'} />
-      </HomeContainer>
-    );
+  if (loading) return null;
   if (error) return <HomeContainer>{error}</HomeContainer>;
   return (
     <HomeContainer>
