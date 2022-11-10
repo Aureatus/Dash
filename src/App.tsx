@@ -5,7 +5,6 @@ import { ThemeProvider } from 'styled-components';
 import DashHeader from './Components/DashHeader/DashHeader';
 import HomePage from './Components/HomePage/HomePage';
 import LandingPage from './Components/LandingPage/LandingPage';
-import LoadingPage from './Components/LoadingPage/LoadingPage';
 import ProtectedRoute from './Components/ProtectedRoute';
 import SignInPage from './Components/SignInPage/SignInPage';
 import SignUpPage from './Components/SignUpPage/SignUpPage';
@@ -21,6 +20,7 @@ function App() {
   const [user, loading, error] = useAuthState();
 
   if (error) return <div>Error, please reload the site.</div>;
+  if (loading) return null;
 
   return (
     <ThemeProvider theme={theme}>
@@ -28,25 +28,21 @@ function App() {
       <UserContext.Provider value={user}>
         <Container>
           <DashHeader setTheme={setTheme}></DashHeader>
-          {loading ? (
-            <LoadingPage text="User loading..." />
-          ) : (
-            <Routes>
-              <Route
-                element={<ProtectedRoute currentUser={user} desiredUserStatus={null} />}
-              >
-                <Route index element={<Navigate to={'/landing'} />} />
-                <Route path="landing" element={<LandingPage />} />
-                <Route path="sign-in" element={<SignInPage />} />
-                <Route path="sign-up" element={<SignUpPage />} />
-              </Route>
-              <Route
-                element={<ProtectedRoute currentUser={user} desiredUserStatus={!null} />}
-              >
-                <Route path="home" element={<HomePage />} />
-              </Route>
-            </Routes>
-          )}
+          <Routes>
+            <Route
+              element={<ProtectedRoute currentUser={user} desiredUserStatus={null} />}
+            >
+              <Route index element={<Navigate to={'/landing'} />} />
+              <Route path="landing" element={<LandingPage />} />
+              <Route path="sign-in" element={<SignInPage />} />
+              <Route path="sign-up" element={<SignUpPage />} />
+            </Route>
+            <Route
+              element={<ProtectedRoute currentUser={user} desiredUserStatus={!null} />}
+            >
+              <Route path="home" element={<HomePage />} />
+            </Route>
+          </Routes>
         </Container>
       </UserContext.Provider>
     </ThemeProvider>
