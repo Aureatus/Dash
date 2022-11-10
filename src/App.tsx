@@ -19,8 +19,8 @@ function App() {
 
   const [user, loading, error] = useAuthState();
 
-  if (error) return <div>Error, please reload the site.</div>;
   if (loading) return null;
+  if (error) return <div>Error, please reload the site.</div>;
 
   return (
     <ThemeProvider theme={theme}>
