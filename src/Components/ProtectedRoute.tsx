@@ -14,12 +14,12 @@ const ProtectedRoute = ({
   useEffect(() => {
     // Navigates back to last location in history stack
     if (desiredUserStatus === null && currentUser) {
-      if (window.history.length <= 1) {
+      if (window.history.length <= 2) {
         navigate('/home', { replace: true });
       } else navigate(-1);
     }
     if (desiredUserStatus === true && !currentUser)
-      if (window.history.length <= 1) {
+      if (window.history.length <= 2) {
         navigate('/landing', { replace: true });
       } else navigate(-1);
   }, []);
