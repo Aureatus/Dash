@@ -1,7 +1,6 @@
 {
   "name": "vite-reactts-eslint-prettier",
   "version": "0.0.0",
-  "main": "./dist/assets/index.db6bdaa6.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
