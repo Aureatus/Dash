@@ -33,7 +33,7 @@ const SignInPage = () => {
   const EmailSignIn = async () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      Navigate('/home');
+      Navigate('/home', { replace: true });
     } catch (err) {
       console.error(err);
     }

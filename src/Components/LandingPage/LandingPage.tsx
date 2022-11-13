@@ -28,7 +28,7 @@ const LandingPage = () => {
   const googleSignIn = async () => {
     try {
       await signInWithPopup(auth, provider);
-      navigate('/home');
+      navigate('/home', { replace: true });
     } catch (err) {
       console.error(err);
     }
@@ -37,7 +37,7 @@ const LandingPage = () => {
   const anonymousSignIn = async () => {
     try {
       await signInAnonymously(auth);
-      navigate('/home');
+      navigate('/home', { replace: true });
     } catch (err) {
       console.error(err);
     }

@@ -13,7 +13,7 @@ const LogOutButton = () => {
       onClick={async () => {
         try {
           await signOut(auth);
-          navigate('/landing');
+          navigate('/landing', { replace: true });
         } catch (err) {
           console.error(err);
         }
