@@ -50,7 +50,7 @@ const StyledLabel = styled.label`
   display: flex;
 `;
 
-const StyledTextArea = styled.textarea`
+const StyledInput = styled.input`
   height: 100%;
   width: 100%;
   padding: 0;
@@ -60,7 +60,6 @@ const StyledTextArea = styled.textarea`
 
   border: none;
   outline: none;
-  resize: none;
 `;
 
 const InputErrorMessage = styled.aside`
@@ -166,8 +165,8 @@ export {
   MessageText,
   ProfilePicture,
   StyledForm,
+  StyledInput,
   StyledLabel,
-  StyledTextArea,
   TimeStamp,
   UserName,
 };

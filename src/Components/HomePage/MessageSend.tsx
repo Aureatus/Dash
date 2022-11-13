@@ -7,8 +7,8 @@ import { db } from '../../firebase/firestore/firestore';
 import {
   InputErrorMessage,
   StyledForm,
+  StyledInput,
   StyledLabel,
-  StyledTextArea,
 } from './StyledComponents';
 
 const MessageSend = () => {
@@ -46,7 +46,8 @@ const MessageSend = () => {
       }}
     >
       <StyledLabel>
-        <StyledTextArea
+        <StyledInput
+          type="text"
           value={content}
           onChange={(e) => {
             setContent(e.target.value);
