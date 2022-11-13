@@ -78,6 +78,8 @@ const MessageDisplayContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  box-sizing: border-box;
   row-gap: 1%;
 
   overflow: auto;
