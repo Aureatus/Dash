@@ -34,7 +34,7 @@ const SignUpPage = () => {
   const EmailSignUp = async () => {
     try {
       const User = (await createUserWithEmailAndPassword(auth, email, password)).user;
-      await updateProfile(User, { displayName: userName });
+      updateProfile(User, { displayName: userName });
       navigate('/home', { replace: true });
     } catch (err) {
       console.error(err);
