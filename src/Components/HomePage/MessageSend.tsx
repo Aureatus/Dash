@@ -29,7 +29,7 @@ const MessageSend = () => {
 
   return (
     <StyledForm
-      onSubmit={(e) => {
+      onSubmit={async (e) => {
         e.preventDefault();
         if (censor.isProfane(content)) return;
         try {
@@ -40,8 +40,11 @@ const MessageSend = () => {
             profilePicture: user?.photoURL,
             userName: user?.displayName,
           });
+          setContent('');
         } catch (error) {
           console.log(error);
+        } finally {
+          setContent('');
         }
       }}
     >
