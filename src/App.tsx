@@ -35,7 +35,7 @@ function App() {
     createRoutesFromElements(
       <Route>
         <Route element={<ProtectedRoute currentUser={user} desiredUserStatus={null} />}>
-          <Route index element={<Navigate to={'/landing'} />} />
+          <Route index element={<Navigate to={'/landing'} replace={true} />} />
           <Route
             element={
               <>
