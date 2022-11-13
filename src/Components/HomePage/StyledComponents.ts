@@ -49,7 +49,7 @@ const StyledLabel = styled.label`
 
 const StyledInput = styled.input`
   height: 100%;
-  width: auto;
+  width: 100%;
   padding: 0;
   box-sizing: border-box;
 
