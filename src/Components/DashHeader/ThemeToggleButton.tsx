@@ -17,7 +17,7 @@ const ThemeToggleButton = ({ setTheme }: { setTheme: Function }) => {
 
   const themeChecker = () => {
     if (theme.background.primary === '#ffffff') return 'light';
-    if (theme.background.primary === '#000000') return 'dark';
+    return 'dark';
   };
 
   const themeName = themeChecker();
