@@ -57,6 +57,7 @@ const MessageSend = () => {
           required
           autoComplete="off"
           placeholder="Type message"
+          maxLength={720}
         />
         {displayProfanityWarning && (
           <InputErrorMessage>Please remove profane content.</InputErrorMessage>
