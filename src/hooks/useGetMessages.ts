@@ -26,7 +26,7 @@ const useGetMessages = () => {
   const [error, setError] = useState<string>('');
 
   useEffect(() => {
-    const messagesQuery = query(collection(db, 'messages'), orderBy('timestamp', 'desc'));
+    const messagesQuery = query(collection(db, 'messages'), orderBy('timestamp', 'asc'));
 
     const fetchMessages = (QuerySnapshot: any[] | QuerySnapshot<DocumentData>) => {
       const messages: {
