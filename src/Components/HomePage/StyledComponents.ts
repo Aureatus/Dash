@@ -82,7 +82,7 @@ const MessageDisplayContainer = styled.div`
   overflow: auto;
 
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 12px;
   }
 
   ::-webkit-scrollbar-track {
