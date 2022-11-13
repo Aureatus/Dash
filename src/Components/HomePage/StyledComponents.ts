@@ -81,6 +81,9 @@ const MessageDisplayContainer = styled.div`
   row-gap: 1%;
 
   overflow: auto;
+
+  border-top: solid 2px;
+  border-bottom: solid 2px;
 `;
 
 const Message = styled.div`
