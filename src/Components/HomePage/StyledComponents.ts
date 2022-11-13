@@ -38,6 +38,9 @@ const Attribution = styled.a`
 const StyledForm = styled.form`
   height: 100%;
   width: 100%;
+
+  box-sizing: border-box;
+  padding: 0% 1%;
 `;
 
 const StyledLabel = styled.label`
@@ -80,6 +83,7 @@ const MessageDisplayContainer = styled.div`
   align-items: flex-start;
 
   box-sizing: border-box;
+  padding: 0% 1%;
   row-gap: 1%;
 
   overflow: auto;
