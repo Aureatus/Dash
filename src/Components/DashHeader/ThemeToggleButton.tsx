@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useTheme } from 'styled-components';
 import styled from 'styled-components';
 
@@ -26,6 +27,10 @@ const ThemeToggleButton = ({ setTheme }: { setTheme: Function }) => {
     if (themeName === 'light') setTheme(darkTheme);
     if (themeName === 'dark') setTheme(lightTheme);
   };
+
+  useEffect(() => {
+    localStorage.setItem('theme', themeName);
+  }, [themeName]);
 
   return (
     <ToggleButton
