@@ -1,6 +1,6 @@
 import { User as FirebaseUser } from 'firebase/auth';
-import { useEffect } from 'react';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Location, Outlet, useLocation, useNavigate } from 'react-router-dom';
 
 const ProtectedRoute = ({
   currentUser,
@@ -10,6 +10,17 @@ const ProtectedRoute = ({
   desiredUserStatus: null | true;
 }) => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const [lastLocation, setLastLocation] = useState<null | Location>(null);
+
+  useEffect(() => {
+    if (
+      lastLocation?.pathname === '/home' &&
+      (location.pathname === '/sign-up' || location.pathname === '/sign-in')
+    )
+      navigate(lastLocation.pathname, { replace: true });
+    setLastLocation(location);
+  }, [location]);
 
   useEffect(() => {
     // Navigates back to last location in history stack
