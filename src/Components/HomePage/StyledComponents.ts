@@ -76,7 +76,7 @@ const MessageDisplayContainer = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: flex-start;
   row-gap: 1%;
 
