@@ -47,7 +47,7 @@ const StyledLabel = styled.label`
   display: flex;
 `;
 
-const StyledInput = styled.input`
+const StyledTextArea = styled.textarea`
   height: 100%;
   width: 100%;
   padding: 0;
@@ -57,6 +57,7 @@ const StyledInput = styled.input`
 
   border: none;
   outline: none;
+  resize: none;
 `;
 
 const InputErrorMessage = styled.aside`
@@ -156,8 +157,8 @@ export {
   MessageText,
   ProfilePicture,
   StyledForm,
-  StyledInput,
   StyledLabel,
+  StyledTextArea,
   TimeStamp,
   UserName,
 };
