@@ -81,30 +81,6 @@ const MessageDisplayContainer = styled.div`
 
   overflow: auto;
 
-  ::-webkit-scrollbar {
-    width: 12px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background-color: inherit;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(
-      to top,
-      ${({ theme }) => theme.accent.secondary},
-      ${({ theme }) => theme.accent.primary}
-    );
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(
-      to bottom,
-      ${({ theme }) => theme.accent.secondary},
-      ${({ theme }) => theme.accent.primary}
-    );
-  }
-
   scrollbar-color: linear-gradient(
       to top,
       ${({ theme }) => theme.accent.secondary},
