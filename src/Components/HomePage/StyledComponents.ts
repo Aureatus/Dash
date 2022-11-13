@@ -9,7 +9,7 @@ const HomeContainer = styled.div`
 
 const MessageContainer = styled.div`
   height: 100%;
-  width: 40%;
+  width: 100%;
   min-width: 320px;
   display: grid;
   grid-template: 90% 10% / 1fr;
