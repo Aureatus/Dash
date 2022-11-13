@@ -80,14 +80,6 @@ const MessageDisplayContainer = styled.div`
   row-gap: 1%;
 
   overflow: auto;
-
-  scrollbar-color: linear-gradient(
-      to top,
-      ${({ theme }) => theme.accent.secondary},
-      ${({ theme }) => theme.accent.primary}
-    )
-    inherit;
-  scrollbar-width: thin;
 `;
 
 const Message = styled.div`
