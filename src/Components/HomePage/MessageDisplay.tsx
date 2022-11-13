@@ -1,5 +1,5 @@
 import { Timestamp } from 'firebase/firestore';
-import { Key } from 'react';
+import { Key, useEffect, useRef } from 'react';
 
 import getMessageTime from '../../Utilities/getMessageTime';
 import {
@@ -23,6 +23,12 @@ const MessageDisplay = ({
     userName: string | null;
   }[];
 }) => {
+  const bottomRef = useRef<null | HTMLDivElement>(null);
+
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView();
+  }, [messages]);
+
   return (
     <MessageDisplayContainer>
       {messages.map((message) => {
@@ -40,6 +46,7 @@ const MessageDisplay = ({
           </Message>
         );
       })}
+      <div ref={bottomRef}></div>
     </MessageDisplayContainer>
   );
 };
