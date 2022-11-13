@@ -16,7 +16,7 @@ import {
 } from './StyledComponents';
 
 const SignUpPage = () => {
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [userName, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -35,7 +35,7 @@ const SignUpPage = () => {
     try {
       const User = (await createUserWithEmailAndPassword(auth, email, password)).user;
       await updateProfile(User, { displayName: userName });
-      Navigate('/home', { replace: true });
+      navigate('/home', { replace: true });
     } catch (err) {
       console.error(err);
     }

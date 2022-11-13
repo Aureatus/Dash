@@ -16,7 +16,7 @@ import {
 } from './StyledComponents';
 
 const SignInPage = () => {
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -33,7 +33,7 @@ const SignInPage = () => {
   const EmailSignIn = async () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      Navigate('/home', { replace: true });
+      navigate('/home', { replace: true });
     } catch (err) {
       console.error(err);
     }
