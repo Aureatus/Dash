@@ -11,6 +11,7 @@ Dash is an instant messaging chat room app.
 ## Features
 - Login with email + password, or OAuth with google, plus the ability to sign in as a guest.
 - Send messages that are shown with the user profile picture, the users name and the date at which the message was sent
+  - Messages are checked for profanity using the censor-sensor npm package. It doesn't stop common profanity, but will stop messages which contain slurs or sexual terms to the best of it's ability.
   - The date is formatted similarly to Discords style, with times used for the current day + yesterday, else the date is displayed in a dd/mm/yyyy format.
 - Light + Dark mode
 - Responsive design
