@@ -5,6 +5,7 @@ Dash is an instant messaging chat room app.
 
 ## Table of Contents
 * [Features](#features)
+* [Roadmap](#roadmap)
 * [Known Issues](#known-issues)
 * [Tech stack](#tech-stack)
 * [Run locally](#run-locally)
@@ -16,6 +17,13 @@ Dash is an instant messaging chat room app.
   - The date is formatted similarly to Discords style, with times used for the current day + yesterday, else the date is displayed in a dd/mm/yyyy format.
 - Light + Dark mode
 - Responsive design
+
+## Roadmap
+
+- Allow users to message other users directly.
+- Add a system where users can create their own chatrooms, and invite other people to it.
+- Allow users to login with discord.
+- Create a randomly generated chatroom every day, that has a randomised theme, and doesn't persist past that day.
 
 ## Known Issues
 
