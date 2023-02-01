@@ -1,7 +1,5 @@
 # Dash
-Readvocab is an instant messaging realtime chat room app.
-
-Dash is an instant messaging chat room app.
+Dash is a realtime chat room app.
 
 ## Table of Contents
 * [Features](#features)
